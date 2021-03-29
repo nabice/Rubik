@@ -9,6 +9,7 @@ use na::{Translation3, Vector3, UnitQuaternion};
 use multiarray::Array3D;
 use arr_macro::arr;
 use rand::Rng;
+use std::env;
 
 struct Cube {
     node: SceneNode,
@@ -280,7 +281,10 @@ fn main() {
 
 
     window.set_light(Light::StickToCamera);
-    let speed = 10;
+    let speed = match env::args().nth(1) {
+        Some(i) => i.parse::<i32>().unwrap_or(10),
+        None => 10,
+    };
 
     let rot =  [
         [UnitQuaternion::from_axis_angle(&Vector3::x_axis(), -std::f32::consts::PI/2.0/(speed as f32)), UnitQuaternion::from_axis_angle(&Vector3::x_axis(), std::f32::consts::PI/2.0/(speed as f32))],
