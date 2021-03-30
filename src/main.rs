@@ -40,7 +40,12 @@ fn main() {
             }
         }
     }
-
+    let color1 = [1.0, 0.0, 0.0];
+    let color2 = [0.0, 1.0, 0.0];
+    let color3 = [0.0, 0.0, 1.0];
+    let color4 = [1.0, 1.0, 1.0];
+    let color5 = [0.4, 0.3, 0.6];
+    let color6 = [0.9, 0.5, 0.1];
     let mut c1 = gs[cn[[0, 2, 2]]].node.add_cube(0.9, 0.9, 0.0);
     let mut c2 = gs[cn[[0, 2, 2]]].node.add_cube(0.0, 0.9, 0.9);
     let mut c3 = gs[cn[[0, 2, 2]]].node.add_cube(0.9, 0.0, 0.9);
@@ -49,9 +54,9 @@ fn main() {
     c2.set_local_translation(Translation3::new(1.5, 1.0, 1.0));
     c3.set_local_translation(Translation3::new(1.0, 1.5, 1.0));
 
-    c1.set_color(1.0, 0.0, 0.0);
-    c2.set_color(0.0, 1.0, 0.0);
-    c3.set_color(0.0, 0.0, 1.0);
+    c1.set_color(color1[0], color1[1], color1[2]);
+    c2.set_color(color2[0], color2[1], color2[2]);
+    c3.set_color(color3[0], color3[1], color3[2]);
 
     let mut c4 = gs[cn[[2, 2, 2]]].node.add_cube(0.9, 0.9, 0.0);
     let mut c5 = gs[cn[[2, 2, 2]]].node.add_cube(0.0, 0.9, 0.9);
@@ -61,9 +66,9 @@ fn main() {
     c5.set_local_translation(Translation3::new(-1.5, 1.0, 1.0));
     c6.set_local_translation(Translation3::new(-1.0, 1.5, 1.0));
 
-    c4.set_color(1.0, 0.0, 0.0);
-    c5.set_color(1.0, 1.0, 1.0);
-    c6.set_color(0.0, 0.0, 1.0);
+    c4.set_color(color1[0], color1[1], color1[2]);
+    c5.set_color(color4[0], color4[1], color4[2]);
+    c6.set_color(color3[0], color3[1], color3[2]);
 
     let mut c7 = gs[cn[[1, 2, 2]]].node.add_cube(0.9, 0.9, 0.0);
     let mut c8 = gs[cn[[1, 2, 2]]].node.add_cube(0.9, 0.0, 0.9);
@@ -71,8 +76,8 @@ fn main() {
     c7.set_local_translation(Translation3::new(0.0, 1.0, 1.5));
     c8.set_local_translation(Translation3::new(0.0, 1.5, 1.0));
 
-    c7.set_color(1.0, 0.0, 0.0);
-    c8.set_color(0.0, 0.0, 1.0);
+    c7.set_color(color1[0], color1[1], color1[2]);
+    c8.set_color(color3[0], color3[1], color3[2]);
 
     let mut c9 = gs[cn[[0, 0, 2]]].node.add_cube(0.9, 0.9, 0.0);
     let mut c10 = gs[cn[[0, 0, 2]]].node.add_cube(0.0, 0.9, 0.9);
@@ -82,9 +87,9 @@ fn main() {
     c10.set_local_translation(Translation3::new(1.5, -1.0, 1.0));
     c11.set_local_translation(Translation3::new(1.0, -1.5, 1.0));
 
-    c9.set_color(1.0, 0.0, 0.0);
-    c10.set_color(0.0, 1.0, 0.0);
-    c11.set_color(0.4, 0.3, 0.6);
+    c9.set_color(color1[0], color1[1], color1[2]);
+    c10.set_color(color2[0], color2[1], color2[2]);
+    c11.set_color(color5[0], color5[1], color5[2]);
 
     let mut c12 = gs[cn[[2, 0, 2]]].node.add_cube(0.9, 0.9, 0.0);
     let mut c13 = gs[cn[[2, 0, 2]]].node.add_cube(0.0, 0.9, 0.9);
@@ -94,9 +99,9 @@ fn main() {
     c13.set_local_translation(Translation3::new(-1.5, -1.0, 1.0));
     c14.set_local_translation(Translation3::new(-1.0, -1.5, 1.0));
 
-    c12.set_color(1.0, 0.0, 0.0);
-    c13.set_color(1.0, 1.0, 1.0);
-    c14.set_color(0.4, 0.3, 0.6);
+    c12.set_color(color1[0], color1[1], color1[2]);
+    c13.set_color(color4[0], color4[1], color4[2]);
+    c14.set_color(color5[0], color5[1], color5[2]);
 
     let mut c15 = gs[cn[[1, 0, 2]]].node.add_cube(0.9, 0.9, 0.0);
     let mut c16 = gs[cn[[1, 0, 2]]].node.add_cube(0.9, 0.0, 0.9);
@@ -104,8 +109,8 @@ fn main() {
     c15.set_local_translation(Translation3::new(0.0, -1.0, 1.5));
     c16.set_local_translation(Translation3::new(0.0, -1.5, 1.0));
 
-    c15.set_color(1.0, 0.0, 0.0);
-    c16.set_color(0.4, 0.3, 0.6);
+    c15.set_color(color1[0], color1[1], color1[2]);
+    c16.set_color(color5[0], color5[1], color5[2]);
 
 
     let mut c17 = gs[cn[[0, 2, 0]]].node.add_cube(0.9, 0.9, 0.0);
@@ -116,9 +121,9 @@ fn main() {
     c18.set_local_translation(Translation3::new(1.5, 1.0, -1.0));
     c19.set_local_translation(Translation3::new(1.0, 1.5, -1.0));
 
-    c17.set_color(0.9, 0.5, 0.1);
-    c18.set_color(0.0, 1.0, 0.0);
-    c19.set_color(0.0, 0.0, 1.0);
+    c17.set_color(color6[0], color6[1], color6[2]);
+    c18.set_color(color2[0], color2[1], color2[2]);
+    c19.set_color(color3[0], color3[1], color3[2]);
 
     let mut c20 = gs[cn[[2, 2, 0]]].node.add_cube(0.9, 0.9, 0.0);
     let mut c21 = gs[cn[[2, 2, 0]]].node.add_cube(0.0, 0.9, 0.9);
@@ -128,9 +133,9 @@ fn main() {
     c21.set_local_translation(Translation3::new(-1.5, 1.0, -1.0));
     c22.set_local_translation(Translation3::new(-1.0, 1.5, -1.0));
 
-    c20.set_color(0.9, 0.5, 0.1);
-    c21.set_color(1.0, 1.0, 1.0);
-    c22.set_color(0.0, 0.0, 1.0);
+    c20.set_color(color6[0], color6[1], color6[2]);
+    c21.set_color(color4[0], color4[1], color4[2]);
+    c22.set_color(color3[0], color3[1], color3[2]);
 
     let mut c23 = gs[cn[[1, 2, 0]]].node.add_cube(0.9, 0.9, 0.0);
     let mut c24 = gs[cn[[1, 2, 0]]].node.add_cube(0.9, 0.0, 0.9);
@@ -138,8 +143,8 @@ fn main() {
     c23.set_local_translation(Translation3::new(0.0, 1.0, -1.5));
     c24.set_local_translation(Translation3::new(0.0, 1.5, -1.0));
 
-    c23.set_color(0.9, 0.5, 0.1);
-    c24.set_color(0.0, 0.0, 1.0);
+    c23.set_color(color6[0], color6[1], color6[2]);
+    c24.set_color(color3[0], color3[1], color3[2]);
 
     let mut c25 = gs[cn[[0, 0, 0]]].node.add_cube(0.9, 0.9, 0.0);
     let mut c26 = gs[cn[[0, 0, 0]]].node.add_cube(0.0, 0.9, 0.9);
@@ -149,9 +154,9 @@ fn main() {
     c26.set_local_translation(Translation3::new(1.5, -1.0, -1.0));
     c27.set_local_translation(Translation3::new(1.0, -1.5, -1.0));
 
-    c25.set_color(0.9, 0.5, 0.1);
-    c26.set_color(0.0, 1.0, 0.0);
-    c27.set_color(0.4, 0.3, 0.6);
+    c25.set_color(color6[0], color6[1], color6[2]);
+    c26.set_color(color2[0], color2[1], color2[2]);
+    c27.set_color(color5[0], color5[1], color5[2]);
 
     let mut c28 = gs[cn[[2, 0, 0]]].node.add_cube(0.9, 0.9, 0.0);
     let mut c29 = gs[cn[[2, 0, 0]]].node.add_cube(0.0, 0.9, 0.9);
@@ -161,9 +166,9 @@ fn main() {
     c29.set_local_translation(Translation3::new(-1.5, -1.0, -1.0));
     c30.set_local_translation(Translation3::new(-1.0, -1.5, -1.0));
 
-    c28.set_color(0.9, 0.5, 0.1);
-    c29.set_color(1.0, 1.0, 1.0);
-    c30.set_color(0.4, 0.3, 0.6);
+    c28.set_color(color6[0], color6[1], color6[2]);
+    c29.set_color(color4[0], color4[1], color4[2]);
+    c30.set_color(color5[0], color5[1], color5[2]);
 
     let mut c31 = gs[cn[[1, 0, 0]]].node.add_cube(0.9, 0.9, 0.0);
     let mut c32 = gs[cn[[1, 0, 0]]].node.add_cube(0.9, 0.0, 0.9);
@@ -171,8 +176,8 @@ fn main() {
     c31.set_local_translation(Translation3::new(0.0, -1.0, -1.5));
     c32.set_local_translation(Translation3::new(0.0, -1.5, -1.0));
 
-    c31.set_color(0.9, 0.5, 0.1);
-    c32.set_color(0.4, 0.3, 0.6);
+    c31.set_color(color6[0], color6[1], color6[2]);
+    c32.set_color(color5[0], color5[1], color5[2]);
 
 
     let mut c33 = gs[cn[[0, 1, 2]]].node.add_cube(0.0, 0.9, 0.9);
@@ -181,8 +186,8 @@ fn main() {
     c33.set_local_translation(Translation3::new(1.5, 0.0, 1.0));
     c34.set_local_translation(Translation3::new(1.0, 0.0, 1.5));
 
-    c33.set_color(0.0, 1.0, 0.0);
-    c34.set_color(1.0, 0.0, 0.0);
+    c33.set_color(color2[0], color2[1], color2[2]);
+    c34.set_color(color1[0], color1[1], color1[2]);
 
 
     let mut c35 = gs[cn[[2, 1, 2]]].node.add_cube(0.0, 0.9, 0.9);
@@ -191,8 +196,8 @@ fn main() {
     c35.set_local_translation(Translation3::new(-1.5, 0.0, 1.0));
     c36.set_local_translation(Translation3::new(-1.0, 0.0, 1.5));
 
-    c35.set_color(1.0, 1.0, 1.0);
-    c36.set_color(1.0, 0.0, 0.0);
+    c35.set_color(color4[0], color4[1], color4[2]);
+    c36.set_color(color1[0], color1[1], color1[2]);
 
 
     let mut c37 = gs[cn[[0, 1, 0]]].node.add_cube(0.0, 0.9, 0.9);
@@ -201,8 +206,8 @@ fn main() {
     c37.set_local_translation(Translation3::new(1.5, 0.0, -1.0));
     c38.set_local_translation(Translation3::new(1.0, 0.0, -1.5));
 
-    c37.set_color(0.0, 1.0, 0.0);
-    c38.set_color(0.9, 0.5, 0.1);
+    c37.set_color(color2[0], color2[1], color2[2]);
+    c38.set_color(color6[0], color6[1], color6[2]);
 
 
     let mut c39 = gs[cn[[2, 1, 0]]].node.add_cube(0.0, 0.9, 0.9);
@@ -211,8 +216,8 @@ fn main() {
     c39.set_local_translation(Translation3::new(-1.5, 0.0, -1.0));
     c40.set_local_translation(Translation3::new(-1.0, 0.0, -1.5));
 
-    c39.set_color(1.0, 1.0, 1.0);
-    c40.set_color(0.9, 0.5, 0.1);
+    c39.set_color(color4[0], color4[1], color4[2]);
+    c40.set_color(color6[0], color6[1], color6[2]);
 
 
 
@@ -222,8 +227,8 @@ fn main() {
     c41.set_local_translation(Translation3::new(1.5, 1.0, 0.0));
     c42.set_local_translation(Translation3::new(1.0, 1.5, 0.0));
 
-    c41.set_color(0.0, 1.0, 0.0);
-    c42.set_color(0.0, 0.0, 1.0);
+    c41.set_color(color2[0], color2[1], color2[2]);
+    c42.set_color(color3[0], color3[1], color3[2]);
 
 
     let mut c43 = gs[cn[[2, 2, 1]]].node.add_cube(0.0, 0.9, 0.9);
@@ -232,8 +237,8 @@ fn main() {
     c43.set_local_translation(Translation3::new(-1.5, 1.0, 0.0));
     c44.set_local_translation(Translation3::new(-1.0, 1.5, 0.0));
 
-    c43.set_color(1.0, 1.0, 1.0);
-    c44.set_color(0.0, 0.0, 1.0);
+    c43.set_color(color4[0], color4[1], color4[2]);
+    c44.set_color(color3[0], color3[1], color3[2]);
 
 
     let mut c45 = gs[cn[[0, 0, 1]]].node.add_cube(0.0, 0.9, 0.9);
@@ -242,8 +247,8 @@ fn main() {
     c45.set_local_translation(Translation3::new(1.5, -1.0, 0.0));
     c46.set_local_translation(Translation3::new(1.0, -1.5, 0.0));
 
-    c45.set_color(0.0, 1.0, 0.0);
-    c46.set_color(0.4, 0.3, 0.6);
+    c45.set_color(color2[0], color2[1], color2[2]);
+    c46.set_color(color5[0], color5[1], color5[2]);
 
 
     let mut c47 = gs[cn[[2, 0, 1]]].node.add_cube(0.0, 0.9, 0.9);
@@ -252,32 +257,32 @@ fn main() {
     c47.set_local_translation(Translation3::new(-1.5, -1.0, 0.0));
     c48.set_local_translation(Translation3::new(-1.0, -1.5, 0.0));
 
-    c47.set_color(1.0, 1.0, 1.0);
-    c48.set_color(0.4, 0.3, 0.6);
+    c47.set_color(color4[0], color4[1], color4[2]);
+    c48.set_color(color5[0], color5[1], color5[2]);
 
     let mut c50 = gs[cn[[1, 0, 1]]].node.add_cube(0.9, 0.0, 0.9);
     c50.set_local_translation(Translation3::new(0.0, -1.5, 0.0));
-    c50.set_color(0.4, 0.3, 0.6);
+    c50.set_color(color5[0], color5[1], color5[2]);
 
     let mut c51 = gs[cn[[1, 2, 1]]].node.add_cube(0.9, 0.0, 0.9);
     c51.set_local_translation(Translation3::new(0.0, 1.5, 0.0));
-    c51.set_color(0.0, 0.0, 1.0);
+    c51.set_color(color3[0], color3[1], color3[2]);
 
     let mut c52 = gs[cn[[0, 1, 1]]].node.add_cube(0.0, 0.9, 0.9);
     c52.set_local_translation(Translation3::new(1.5, 0.0, 0.0));
-    c52.set_color(0.0, 1.0, 0.0);
+    c52.set_color(color2[0], color2[1], color2[2]);
 
     let mut c53 = gs[cn[[2, 1, 1]]].node.add_cube(0.0, 0.9, 0.9);
     c53.set_local_translation(Translation3::new(-1.5, 0.0, 0.0));
-    c53.set_color(1.0, 1.0, 1.0);
+    c53.set_color(color4[0], color4[1], color4[2]);
 
     let mut c54 = gs[cn[[1, 1, 2]]].node.add_cube(0.9, 0.9, 0.0);
     c54.set_local_translation(Translation3::new(0.0, 0.0, 1.5));
-    c54.set_color(1.0, 0.0, 0.0);
+    c54.set_color(color1[0], color1[1], color1[2]);
 
     let mut c55 = gs[cn[[1, 1, 0]]].node.add_cube(0.9, 0.9, 0.0);
     c55.set_local_translation(Translation3::new(0.0, 0.0, -1.5));
-    c55.set_color(0.9, 0.5, 0.1);
+    c55.set_color(color6[0], color6[1], color6[2]);
 
 
     window.set_light(Light::StickToCamera);
@@ -416,9 +421,9 @@ fn main() {
                 }
             }
         }
-        for i in (0..3).step_by(2) {
+        for i in 0..3 {
             for j in (0..3).step_by(2) {
-                for k in (0..3).step_by(2) {
+                for k in 0..3 {
                     let index = cn[[i, j, k]];
                     if gs[index].face != 1 {
                         return;
